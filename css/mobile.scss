@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+$grey: #9b9b9b;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .transition_bar {
+    transition: all 0.25s;
+    content: '';
+    position: absolute;
+    right: 0;
+    height: 6px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+  .transition_bar_expanded {
+    transition: all 0.25s;
+    top: -0px;
+  }
+  .footer_typo {
+    font-size: 12px;
+    color: $grey !important;
+    text-align: center;
+    line-height: 30px;
+  }
+  .bar {
+    @extend .transition_bar;
+    position: fixed;
+    right: 12px;
+    top: 24px;
+    &:before {
+      @extend .transition_bar;
+      top: -8px;
+    }
+    &:after {
+      @extend .transition_bar;
+      top: 8px;
+    }
+  }
+  .menu {
+    transition: all 0.25s;
+    position: fixed;
+    top: 10px;
+    right: 9px;
+    height: 36px;
+    width: 36px;
+    z-index: 1;
+    cursor: pointer;
+    ul {
+      transition: all 0s;
+      position: fixed;
+      left: -9000px;
+    }
+
+    &.active {
+      transition: all 0.25s;
+      text-align: center;
+      line-height: 50px;
+      height: 100%;
+      width: 100%;
+      border-radius: 0px;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.85);
+      ul {
+        transition: all 0s;
+        position: relative;
+        left: 0;
+        z-index: 2;
+        padding-top: 20px;
+      }
+      a {
+        transition: all 0.15s;
+        text-decoration: none;
+        font-size: 20px;
+        padding: 5px;
+        color: #fff;
+        display: block;
+        text-transform: uppercase;
+        &:hover {
+          background-color: rgba(white, 0.8);
+          transition: all 0.15s;
+          letter-spacing: 2px;
+          color: #333;
+          border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+      }
+
+      .bar {
+        background-color: transparent;
+        transition: all 0.25s;
+        right: unset;
+        left: 12px;
+        &:before {
+          @extend .transition_bar_expanded;
+          transform: rotate(45deg);
+        }
+        &:after {
+          @extend .transition_bar_expanded;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  main {
+    article {
+      section#kiloren_part {
+        height: 320px;
+        background: url(/images/kiloren-2x.jpg) no-repeat center center;
+        background-size: cover;
+      }
+      section#main_body {
+        padding: 10px 30px;
+        text-align: center;
+        font-size: 18px;
+        .advertise_container {
+          display: none;
+        }
+      }
+      #description_article {
+        width: 80%;
+        margin: 20px auto;
+        h2 {
+          margin: 40px auto;
+          text-align: center;
+          width: 260px;
+          font-size: 33px;
+          font-weight: 400;
+        }
+        .text {
+          p {
+            &:not(:first-of-type) {
+              display: none;
+            }
+            font-size: 14px;
+            color: #000000;
+            text-align: left;
+            line-height: 24px;
+          }
+        }
+      }
+      #storm {
+        height: 250px;
+        background: url(/images/stormtroopers-2x.jpg) no-repeat center center;
+        background-size: cover;
+      }
+    }
+  }
+  footer {
+    min-height: 250px;
+    background: url(/images/darthvader_2x.jpg) no-repeat center center;
+    background-size: cover;
+    #section_footer {
+      #copyright {
+        @extend .footer_typo;
+        display: none;
+      }
+      padding: 20px;
+      .contents {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-wrap: wrap;
+        .content {
+          ul {
+            display: inline;
+            li {
+              a {
+                @extend .footer_typo;
+              }
+            }
+          }
+          &.left {
+            width: 50%;
+          }
+          &.right {
+            width: 50%;
+          }
+        }
+        .subfooter {
+          padding: 25px 0 10px 0;
+          ul {
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            li {
+              a {
+                margin: 5px;
+                @extend .footer_typo;
+                text-decoration: none;
+                &#instagram {
+                  img {
+                    fill: $grey;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

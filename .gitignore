@@ -9,8 +9,6 @@
 
 # Project specific
 css/*.css.map
-*.css
-.vscode
 # Created by git when using merge tools for conflicts
 *.BACKUP.*
 *.BASE.*

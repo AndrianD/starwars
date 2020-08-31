@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body img {
+  width: 100%;
+  height: auto;
+}
+
+body .transition_bar, body .bar, body .bar:before, body .bar:after {
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  content: '';
+  position: absolute;
+  right: 0;
+  height: 6px;
+  width: 30px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+body .transition_bar_expanded, body .menu.active .bar:before, body .menu.active .bar:after {
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  top: -0px;
+}
+
+body .footer_typo, body footer #section_footer #copyright, body footer #section_footer .contents .content ul li a, body footer #section_footer .contents .subfooter ul li a {
+  font-size: 12px;
+  color: #9b9b9b !important;
+  text-align: center;
+  line-height: 30px;
+}
+
+body .bar {
+  position: fixed;
+  right: 12px;
+  top: 24px;
+}
+
+body .bar:before {
+  top: -8px;
+}
+
+body .bar:after {
+  top: 8px;
+}
+
+body .menu {
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  position: fixed;
+  top: 10px;
+  right: 9px;
+  height: 36px;
+  width: 36px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+body .menu ul {
+  -webkit-transition: all 0s;
+  transition: all 0s;
+  position: fixed;
+  left: -9000px;
+}
+
+body .menu.active {
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  text-align: center;
+  line-height: 50px;
+  height: 100%;
+  width: 100%;
+  border-radius: 0px;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+body .menu.active ul {
+  -webkit-transition: all 0s;
+  transition: all 0s;
+  position: relative;
+  left: 0;
+  z-index: 2;
+  padding-top: 20px;
+}
+
+body .menu.active a {
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 5px;
+  color: #fff;
+  display: block;
+  text-transform: uppercase;
+}
+
+body .menu.active a:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+  letter-spacing: 2px;
+  color: #333;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+body .menu.active .bar {
+  background-color: transparent;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  right: unset;
+  left: 12px;
+}
+
+body .menu.active .bar:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+body .menu.active .bar:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+body main article section#kiloren_part {
+  height: 320px;
+  background: url(/images/kiloren-2x.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+body main article section#main_body {
+  padding: 10px 30px;
+  text-align: center;
+  font-size: 18px;
+}
+
+body main article section#main_body .advertise_container {
+  display: none;
+}
+
+body main article #description_article {
+  width: 80%;
+  margin: 20px auto;
+}
+
+body main article #description_article h2 {
+  margin: 40px auto;
+  text-align: center;
+  width: 260px;
+  font-size: 33px;
+  font-weight: 400;
+}
+
+body main article #description_article .text p {
+  font-size: 14px;
+  color: #000000;
+  text-align: left;
+  line-height: 24px;
+}
+
+body main article #description_article .text p:not(:first-of-type) {
+  display: none;
+}
+
+body main article #storm {
+  height: 250px;
+  background: url(/images/stormtroopers-2x.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+body footer {
+  min-height: 250px;
+  background: url(/images/darthvader_2x.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+body footer #section_footer {
+  padding: 20px;
+}
+
+body footer #section_footer #copyright {
+  display: none;
+}
+
+body footer #section_footer .contents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+body footer #section_footer .contents .content ul {
+  display: inline;
+}
+
+body footer #section_footer .contents .content.left {
+  width: 50%;
+}
+
+body footer #section_footer .contents .content.right {
+  width: 50%;
+}
+
+body footer #section_footer .contents .subfooter {
+  padding: 25px 0 10px 0;
+}
+
+body footer #section_footer .contents .subfooter ul {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body footer #section_footer .contents .subfooter ul li a {
+  margin: 5px;
+  text-decoration: none;
+}
+
+body footer #section_footer .contents .subfooter ul li a#instagram img {
+  fill: #9b9b9b;
+}
+/*# sourceMappingURL=mobile.css.map */

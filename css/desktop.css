@@ -1,0 +1,209 @@
+@media screen and (min-width: 992px) {
+  body img {
+    width: 100%;
+    height: auto;
+  }
+  body header section#logo_content {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  body header section#logo_content .header_bgd {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("/images/header-bg.png");
+    background-size: calc(100% + var(--x) / 2);
+    background-position: center;
+  }
+  body header section#logo_content .logo {
+    position: absolute;
+    width: 700px;
+    left: 25%;
+    max-width: calc(700px - var(--x) / 50);
+    top: 20%;
+  }
+  body .transition_bar {
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+    content: '';
+    position: absolute;
+    right: 0;
+    height: 6px;
+    width: 30px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.95);
+  }
+  body .transition_bar_expanded {
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+    top: -0px;
+  }
+  body .footer_typo, body footer #section_footer #copyright, body footer #section_footer .contents .content ul li a, body footer #section_footer .contents .subfooter ul li a {
+    font-size: 12px;
+    color: #9b9b9b !important;
+    text-align: center;
+    line-height: 30px;
+  }
+  body .bar {
+    display: none;
+  }
+  body nav .menu {
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
+    position: fixed;
+    top: 10px;
+    right: 9px;
+    height: 36px;
+    width: 36px;
+    z-index: 1;
+    cursor: pointer;
+  }
+  body nav .menu #nav_ul {
+    -webkit-transition: all 0s;
+    transition: all 0s;
+    position: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    line-height: 50px;
+    width: 100%;
+    border-radius: 0px;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding-left: 0;
+    margin: 0;
+  }
+  body nav .menu #nav_ul li {
+    list-style-type: none;
+  }
+  body nav .menu #nav_ul a {
+    -webkit-transition: all 0.15s;
+    transition: all 0.15s;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 5px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  body nav .menu #nav_ul a:hover {
+    -webkit-transition: all 0.85s;
+    transition: all 0.85s;
+    letter-spacing: 2px;
+    border-bottom: 2px solid rgba(236, 3, 3, 0.856);
+  }
+  body main article section#kiloren_part {
+    height: 600px;
+    background: url(/images/kiloren.png) no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    -webkit-filter: sepia(var(--y));
+            filter: sepia(var(--y));
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  body main article section#main_body {
+    padding: 10px 30px;
+    font-size: 18px;
+  }
+  body main article section#main_body .advertise_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 850px;
+    margin: 0 auto;
+  }
+  body main article section#main_body .advertise_container .teaser_text {
+    width: 50%;
+    height: 790px;
+    overflow: auto;
+  }
+  body main article section#main_body .advertise_container .advert {
+    position: -webkit-sticky;
+    position: sticky;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  body main article #description_article {
+    width: 57%;
+    margin: 20px auto;
+  }
+  body main article #description_article img {
+    width: 30%;
+    float: left;
+    padding: 0 15px 15px 0;
+  }
+  body main article #description_article h2 {
+    margin: 40px auto;
+    text-align: center;
+    width: auto;
+    font-size: 33px;
+    font-weight: 400;
+  }
+  body main article #description_article .text p {
+    font-size: 14px;
+    color: #000000;
+    text-align: left;
+    line-height: 24px;
+  }
+  body main article #description_article .text p:not(:first-of-type) {
+    display: block;
+  }
+  body main article #storm {
+    height: 250px;
+    background: url(/images/stormtroopers.jpg) no-repeat center center;
+    background-size: cover;
+  }
+  body footer {
+    min-height: 250px;
+    background: url(/images/darthvader.jpg) no-repeat center center;
+    background-size: cover;
+  }
+  body footer #section_footer #copyright {
+    display: block;
+  }
+  body footer #section_footer .contents {
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  body footer #section_footer .contents .content ul {
+    display: inline;
+  }
+  body footer #section_footer .contents .content.left {
+    width: 25%;
+  }
+  body footer #section_footer .contents .content.right {
+    width: 25%;
+  }
+  body footer #section_footer .contents .subfooter {
+    padding: 6px 0;
+  }
+  body footer #section_footer .contents .subfooter ul {
+    padding: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body footer #section_footer .contents .subfooter ul li a {
+    margin: 5px;
+    text-decoration: none;
+  }
+  body footer #section_footer .contents .subfooter ul li a#instagram img {
+    fill: #9b9b9b;
+  }
+}
+/*# sourceMappingURL=desktop.css.map */
